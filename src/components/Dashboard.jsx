@@ -355,9 +355,9 @@ function Dashboard({ onBack, onNavigateToAdd, onNavigateToUpdate, onLogout }) {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  EMS
+                  StaffSphere
                 </span>
-                <span className="text-[11px] font-medium text-slate-500">Dashboard</span>
+                <span className="text-[11px] font-medium text-slate-500">Employee Tracker</span>
               </div>
             </button>
 
@@ -465,7 +465,7 @@ function Dashboard({ onBack, onNavigateToAdd, onNavigateToUpdate, onLogout }) {
           <div className="py-24 flex flex-col items-center justify-center text-slate-500 bg-white/70 backdrop-blur rounded-3xl border border-white">
             <div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4" />
             <p className="text-sm font-bold text-slate-700">Loading dashboard data…</p>
-            <p className="text-xs text-slate-400 mt-1">Querying your database endpoint</p>
+            <p className="text-xs text-slate-400 mt-1">Please wait</p>
           </div>
         )}
 
@@ -852,7 +852,7 @@ function Dashboard({ onBack, onNavigateToAdd, onNavigateToUpdate, onLogout }) {
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white/60 backdrop-blur-xl mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <div>© 2026 EMS. Analytics Dashboard.</div>
+          <div>© 2026 StaffSphere Employee Tracker.</div>
           <div className="flex gap-6">
             <span className="hover:text-indigo-600 cursor-pointer transition-colors">Privacy Policy</span>
             <span className="hover:text-indigo-600 cursor-pointer transition-colors">Help Center</span>

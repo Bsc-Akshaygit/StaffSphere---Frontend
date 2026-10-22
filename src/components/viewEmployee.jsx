@@ -168,7 +168,7 @@ function ViewEmployee({
     } catch (err) {
       console.error('Database fetch error:', err)
       setError(
-        err.message || 'Unable to connect to database at http://localhost:8080/platform/viewEmployee'
+        err.message || 'Unable to load employees. Please try again.'
       )
       setEmployees([])
     } finally {
@@ -223,7 +223,7 @@ function ViewEmployee({
         if (ignore) return
         console.error('Database fetch error:', err)
         setError(
-          err.message || 'Unable to connect to database at http://localhost:8080/platform/viewEmployee'
+          err.message || 'Unable to load employees. Please try again.'
         )
         setEmployees([])
       } finally {
@@ -387,9 +387,9 @@ function ViewEmployee({
                 </div>
                 <div className="flex flex-col leading-tight">
                   <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    EMS
+                    StaffSphere
                   </span>
-                  <span className="text-[11px] font-medium text-slate-500">Database Workforce Directory</span>
+                  <span className="text-[11px] font-medium text-slate-500">Employee Tracker</span>
                 </div>
               </button>
             </div>
@@ -513,10 +513,6 @@ function ViewEmployee({
         {/* Page Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold mb-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Source: http://localhost:8080/platform/viewEmployee
-            </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Employee Directory
             </h1>
@@ -663,8 +659,8 @@ function ViewEmployee({
         {loading && (
           <div className="py-16 text-center text-slate-500 bg-white/60 backdrop-blur rounded-3xl border border-white">
             <div className="inline-block animate-spin w-9 h-9 border-4 border-indigo-500 border-t-transparent rounded-full mb-3" />
-            <p className="text-sm font-bold text-slate-700">Connecting to database...</p>
-            <p className="text-xs text-slate-400 mt-1">Querying http://localhost:8080/platform/viewEmployee</p>
+            <p className="text-sm font-bold text-slate-700">Loading employees...</p>
+            <p className="text-xs text-slate-400 mt-1">Please wait</p>
           </div>
         )}
 
@@ -841,7 +837,7 @@ function ViewEmployee({
                 <strong className="text-slate-900">{employees.length}</strong> database records
               </div>
               <div className="text-[11px] text-slate-400">
-                Data loaded live from http://localhost:8080/platform/viewEmployee
+                StaffSphere Employee Tracker
               </div>
             </div>
           </div>
@@ -1122,7 +1118,7 @@ function ViewEmployee({
       {/* Footer */}
       <footer className="relative border-t border-slate-200 bg-white/60 backdrop-blur-xl mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <div>© 2026 EMS. Enterprise Workforce Platform.</div>
+          <div>© 2026 StaffSphere Employee Tracker.</div>
           <div className="flex gap-6">
             <span className="hover:text-indigo-600 cursor-pointer">Directory Policy</span>
             <span className="hover:text-indigo-600 cursor-pointer">Security Compliance</span>

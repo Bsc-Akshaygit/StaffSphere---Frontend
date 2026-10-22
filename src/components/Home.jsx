@@ -56,9 +56,9 @@ function Home({ onLogin, onSignup, onViewEmployees } = {}) {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  EMS
+                  StaffSphere
                 </span>
-                <span className="text-[11px] font-medium text-slate-500">Employee Management System</span>
+                <span className="text-[11px] font-medium text-slate-500">Employee Tracker</span>
               </div>
             </div>
 
@@ -191,61 +191,6 @@ function Home({ onLogin, onSignup, onViewEmployees } = {}) {
         </section>
       </main>
 
-      <footer className="relative mt-10 border-t border-slate-200 bg-white/60 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <div className="col-span-2">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/30">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">EMS</span>
-                  <div className="text-[11px] text-slate-500 font-medium">Employee Management System</div>
-                </div>
-              </div>
-              <p className="text-sm text-slate-600 leading-relaxed max-w-sm mb-5">
-                The modern HR platform built for growing teams. Simplify workforce management with intuitive tools and powerful automation.
-              </p>
-              <div className="flex gap-2.5">
-                {['T','L','G'].map((l, i) => (
-                  <div key={i} className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-gradient-to-br hover:from-indigo-500 hover:to-purple-500 hover:text-white flex items-center justify-center text-sm font-bold text-slate-600 cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-indigo-200">
-                    {l}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="text-sm font-bold text-slate-900 mb-5 uppercase tracking-wider">Product</div>
-              <ul className="space-y-3 text-sm text-slate-600">
-                {['Features','Pricing','Integrations','Changelog','Roadmap'].map(l => (
-                  <li key={l} className="hover:text-indigo-600 cursor-pointer transition-colors font-medium">{l}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <div className="text-sm font-bold text-slate-900 mb-5 uppercase tracking-wider">Company</div>
-              <ul className="space-y-3 text-sm text-slate-600">
-                {['About','Blog','Careers','Contact','Support'].map(l => (
-                  <li key={l} className="hover:text-indigo-600 cursor-pointer transition-colors font-medium">{l}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-slate-500 font-medium">
-              © 2026 EMS. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-sm text-slate-500 font-medium">
-              {['Privacy','Terms','Cookies','Security'].map(l => (
-                <span key={l} className="hover:text-indigo-600 cursor-pointer transition-colors">{l}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
