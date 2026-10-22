@@ -270,7 +270,7 @@ function UpdateEmployee({ onBack, onNavigateToView }) {
                 <span className="text-xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-blue-600 bg-clip-text text-transparent">
                   Update Employee
                 </span>
-                <span className="text-[11px] font-medium text-slate-500">Employee Management System</span>
+                <span className="text-[11px] font-medium text-slate-500">StaffSphere Employee Tracker</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
