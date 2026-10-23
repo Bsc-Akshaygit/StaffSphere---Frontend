@@ -565,18 +565,6 @@ function Login({ onBack, onNavigateToSignup, onLoginSuccess, sessionExpiredMessa
           </div>
         </div>
       )}
-
-      {/* Footer */}
-      <footer className="relative border-t border-slate-200 bg-white/60 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <div>© 2026 EMS. All rights reserved.</div>
-          <div className="flex gap-6">
-            <span className="hover:text-indigo-600 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-indigo-600 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-indigo-600 cursor-pointer">Help Center</span>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

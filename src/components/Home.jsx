@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Home({ onLogin, onSignup, onViewEmployees } = {}) {
+function Home({ onLogin, onSignup, onViewEmployees, onAbout } = {}) {
   const [active, setActive] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const isLoggedIn = Boolean(localStorage.getItem('accessToken'))
@@ -25,10 +25,7 @@ function Home({ onLogin, onSignup, onViewEmployees } = {}) {
     } else if (key === 'viewEmployee') {
       if (onViewEmployees) onViewEmployees()
     } else if (key === 'about') {
-      const section = document.getElementById('features-section')
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' })
-      }
+      if (onAbout) onAbout()
     } else if (key === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
