@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Home from './components/Home'
+import About from './components/About'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import AddEmployee from './components/AddEmployee'
@@ -41,6 +42,17 @@ function App() {
     window.addEventListener('auth:logout', handler)
     return () => window.removeEventListener('auth:logout', handler)
   }, [])
+
+  if (page === 'about') {
+    return (
+      <About
+        onBack={() => setPage('home')}
+        onLogin={() => setPage('login')}
+        onSignup={() => setPage('signup')}
+        onViewEmployees={() => setPage('viewEmployee')}
+      />
+    )
+  }
 
   if (page === 'login') {
     return (
@@ -95,6 +107,7 @@ function App() {
       onLogin={() => setPage('login')}
       onSignup={() => setPage('signup')}
       onViewEmployees={() => setPage('viewEmployee')}
+      onAbout={() => setPage('about')}
     />
   )
 }
